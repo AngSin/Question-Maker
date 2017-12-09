@@ -1,0 +1,189 @@
+body, .row {
+  padding: 0;
+  margin: 0;
+  color: rgb(50,50,50);
+}
+
+img {
+  text-align: center;
+  width: 500px;
+  margin: 20px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgb(0, 198, 123);
+}
+button:hover {
+  background-color: rgb(112, 181, 209);
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+  line-height: 28px;
+  border-color: rgb(81, 130, 150);
+  font-size: 18px;
+}
+
+#left-pane {
+  background-color: #A2DFE5;
+  padding-bottom: 500px;
+}
+#left-pane .active {
+  font-weight: bold;
+}
+#left-pane .title {
+  text-align: center;
+  padding: 10% 10% 16% 10%;
+  font-size: 26px;
+  font-weight: 600;
+}
+#left-pane .question {
+  font-size: 22px;
+  padding: 0% 6% 12% 14%;
+  word-wrap: break-word;
+}
+#left-pane .question:hover {
+  cursor: pointer;
+}
+#left-pane .question input {
+  margin-right: 2%;
+}
+#left-pane button {
+  transition: 0.3s all ease-out;
+  margin-left: 10%;
+}
+#left-pane button:hover {
+  color: rgb(19, 198, 123);
+  background-color: white;
+}
+
+#right-pane {
+  padding: 0 0 0 10%;
+}
+#right-pane .question {
+  font-size: 26px;
+  padding: 10% 0 0 0;
+  display:block;
+}
+#right-pane .question textarea {
+  vertical-align:middle;
+  text-align: center;
+  font-size: 22px;
+  width: 70%;
+}
+#right-pane li {
+  padding: 10px;
+  display:block;
+}
+#right-pane li textarea {
+  vertical-align:middle;
+}
+#right-pane .option-number {
+  padding-right: 30px;
+}
+#right-pane button{
+  margin-top: 5%;
+}
+#right-pane .option textarea {
+  width: 60%;
+}
+#right-pane .delete-option {
+  margin-left: 10%;
+}
+#right-pane .add-question, #right-pane .delete-question {
+  display: none;
+}
+
+.uploader-label {
+  font-weight: normal;
+  margin-top: 20px;
+  border-radius: 8px;
+  padding: 5px 20px;
+  margin-left: 40%;
+  background: rgb(19, 198, 123);
+  color: white;
+  position: relative;
+  text-align: center;
+  line-height: 150%;
+  cursor: pointer;
+}
+.uploader-label:hover {
+  background: rgb(112, 181, 209);
+}
+.uploader-label:active {
+  background: rgb(0,250,150);
+}
+label.uploader-label input[type="file"] {
+  position: fixed;
+  top: -9000px;
+  left: -9000px;
+}
+/*For when the left pane get's too small and the buttons stack on top of each other*/
+@media screen and (max-width: 1161px) {
+  #left-pane .delete-question {
+    margin-top: 30px;
+  }
+}
+
+/* according to bootstrap grid's sm(992px)*/
+@media screen and (max-width: 991px) {
+  body {
+    background-color: #A2DFE5;
+  }
+  button {
+      font-size: 12px;
+      padding: 4px 10px;
+  }
+  #right-pane .add-question, #right-pane .delete-question {
+    /* Hover background color and color is not changed because
+      there is no hover on mobile or tablets */
+    background-color: rgb(85, 110, 150);
+    display: inline-block;
+  }
+  #right-pane .delete-question {
+    margin-left: 30px;
+  }
+  #right-pane .add-question:hover, #right-pane .delete-question:hover {
+    background-color: white;
+    color: rgb(85, 110, 150);
+  }
+  button:hover {
+    background-color: white;
+    color: rgb(19, 198, 123);
+  }
+}
+
+/* according to bootstrap grid's xs(px)*/
+@media screen and (max-width: 700px) {
+  body {
+    background-color: #A2DFE5;
+  }
+  #right-pane .question textarea {
+    text-align: left;
+    width: 94vw;
+    height: 80px;
+  }
+  #right-pane {
+    padding: 0;
+    margin-left: 2vw;
+  }
+  #right-pane .option textarea {
+    width: 80vw;
+  }
+  img {
+    margin: 0;
+    width: 96vw;
+  }
+}
